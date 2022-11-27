@@ -1,0 +1,252 @@
+<html>
+<head>
+<title>Hellow World!</title>
+<style>
+
+
+
+
+.container{
+position: relative;
+min-height: 100vh;
+background: linear-gradient(180deg, #49BD3C 0%, #1695A3 100%);
+}
+h2{color:white; text-align: center;margin-top:2px;}
+p{color:white; text-align: center;margin-top:2px;}
+
+
+
+
+
+
+.container .image-container{
+gap:15px;
+justify-content: center;
+padding: 10px;
+}
+.container .image-container .image{
+height: 250px;
+clip-path: circle();
+width: 350px;
+border: 1px solid black;
+box-shadow: 0 5px 15px rgba(0,0,0,1);
+over-flow:hidden;
+cursor: pointer;
+}
+.container .image-container .image img{
+height: 250px;
+clip-path: circle();
+width: 350px;
+object-fit: cover;
+transition: .2s linear;
+
+}
+
+
+
+
+
+.container .image-containera{
+gap:15px;
+justify-content: center;
+padding: 10px;
+}
+.container .image-containera .imagea{
+height: 200px;
+width: 350px;
+margin-left:470px;
+margin-top:-240px;
+border: 1px solid black;
+over-flow:hidden;
+cursor: pointer;
+}
+.container .image-containera .imagea img{
+height: 200px;
+width: 350px;
+object-fit: cover;
+transition: .2s linear;
+
+}
+
+
+
+
+
+
+.container .image-containerb{
+gap:15px;
+justify-content: center;
+padding: 10px;
+}
+.container .image-containerb .imageb{
+height: 400px;
+width: 767px;
+margin-left:55px;
+margin-top:40px;
+border: 1px solid black;
+over-flow:hidden;
+cursor: pointer;
+}
+.container .image-containerb .imageb img{
+height: 400px;
+width: 767px;
+object-fit: cover;
+transition: .2s linear;
+
+}
+
+
+
+
+
+
+
+
+.container .popup-imag{
+position:fixed;
+top: 0;
+left: 0;
+background: rgba(0,0,0,.9);
+height: 100%;
+width: 100%;
+z-index: 100;
+display: none;
+}
+
+
+
+
+
+.container .popup-imag span{
+position: absolute;
+top: 0;
+right:10px;
+font-size: 60px;
+font-family:40px;
+font-weight: bolder;
+color: #fff;
+cursor:pointer;
+}
+
+
+
+
+
+.container .popup-imag img{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+border: 5px solid #fff;
+border-radius: 5px;
+width: 750px;
+object-fit: cover;
+}
+
+
+
+
+
+@media(max-width:768px){
+.container .popup-imag img{
+width:95%;
+
+}
+
+
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+      <h2>New Zealand</h2>
+<p>Newzealand is the most beautiful country in the world and we wish to go newzealand to see the beauty of the newzealand</p>
+   
+   <div class="image-container">
+        <div class="image"><img src="https://wallpapercave.com/wp/wp4088746.jpg" ></div>
+   </div>
+
+   <div class="image-containera">
+        <div class="imagea"><img src="https://wallpapercave.com/dwp1x/wp4088743.jpg"></div>
+   </div>
+
+   <div class="image-containerb">
+        <div class="imageb"><img src="https://www.wallpapertip.com/wmimgs/7-79846_maldives.jpg"></div>
+   </div>
+
+
+
+
+ <div class="popup-imag">
+ <span>&times;</span>
+ <img src="C:\Users\ZeeshanAkhtar\Desktop\images\download (1).jpg" alt="">
+ </div>
+
+
+
+</div>
+
+
+
+
+
+
+<script>
+
+
+
+
+
+
+document.querySelectorAll('.image-container img').forEach(image =>{
+image.onclick = () =>{
+document.querySelector('.popup-imag').style.display = 'block';
+document.querySelector('.popup-imag img').src = image.getAttribute('src'); 
+}
+});
+document.querySelector('.popup-imag span').onclick = () =>{
+document.querySelector('.popup-imag').style.display = 'none';
+}
+
+
+
+
+
+
+
+
+
+document.querySelectorAll('.image-containera img').forEach(image =>{
+image.onclick = () =>{
+document.querySelector('.popup-imag').style.display = 'block';
+document.querySelector('.popup-imag img').src = image.getAttribute('src'); 
+}
+});
+document.querySelector('.popup-imag span').onclick = () =>{
+document.querySelector('.popup-imag').style.display = 'none';
+}
+
+
+
+
+
+document.querySelectorAll('.image-containerb img').forEach(image =>{
+image.onclick = () =>{
+document.querySelector('.popup-imag').style.display = 'block';
+document.querySelector('.popup-imag img').src = image.getAttribute('src'); 
+}
+});
+document.querySelector('.popup-imag span').onclick = () =>{
+document.querySelector('.popup-imag').style.display = 'none';
+}
+
+
+
+
+
+</script>
+</body>
+</html>
